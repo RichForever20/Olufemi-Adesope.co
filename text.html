@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     .content {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.more-content {
+    display: none;
+}
+
+.read-more-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #0056b3;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p>This is some text that is always visible.</p>
+        <div class="more-content">
+            <p>This is the extra content for section 1.</p>
+        </div>
+        <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+    </div>
+    
+    <div class="content">
+        <p>This is some text that is always visible.</p>
+        <div class="more-content">
+            <p>This is the extra content for section 2.</p>
+        </div>
+        <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+    </div>
+    
+    <!-- Repeat the above block 6 more times for a total of 8 sections -->
+    
+    
+<script>
+    function toggleContent(button) {
+        const content = button.previousElementSibling;
+        
+        content.classList.toggle('visible');
+    
+        if (content.classList.contains('visible')) {
+            content.style.display = 'block';
+            button.textContent = 'Read Less';
+        } else {
+            content.style.display = 'none';
+            button.textContent = 'Read More';
+        }
+    }
+</script>
+</body>
+</html>
