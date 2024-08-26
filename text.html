@@ -5,69 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-     .content {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-}
-
-.more-content {
-    display: none;
-}
-
-.read-more-btn {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.read-more-btn:hover {
-    background-color: #0056b3;
-}
-
+        .more-content {
+            display: none;
+        }
+        
+        .read-more-btn {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .read-more-btn:hover {
+            background-color: #0056b3;
+        }
+        
 
     </style>
 </head>
 <body>
-    <div class="content">
+    <div class="content-block">
         <p>This is some text that is always visible.</p>
         <div class="more-content">
-            <p>This is the extra content for section 1.</p>
+            <p>This is the extra content that will be shown when you click "Read More". You can add as much content as needed here.
+                planning approvals for the
+                designed development, costing the approval development and building
+                same to high standard and delivering developments that withstand the
+                test of time.
+            </p>
         </div>
-        <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+        <button class="read-more-btn">Read More</button>
     </div>
     
-    <div class="content">
-        <p>This is some text that is always visible.</p>
+    <div class="content-block">
+        <p>This is another text that is always visible.</p>
         <div class="more-content">
-            <p>This is the extra content for section 2.</p>
+            <p>This is another extra content that will be shown when you click "Read More".
+                planning approvals for the
+                designed development, costing the approval development and building
+                same to high standard and delivering developments that withstand the
+                test of time.
+            </p>
         </div>
-        <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+        <button class="read-more-btn ">Read More</button>
+    </div>
+
+    <div class="content-block">
+        <p>This is another text that is always visible.</p>
+        <div class="more-content">
+            <p>This is another extra content that will be shown when you click "Read More".
+                planning approvals for the
+                designed development, costing the approval development and building
+                same to high standard and delivering developments that withstand the
+                test of time.
+            </p>
+        </div>
+        <button class="read-more-btn">Read More</button>
+    </div>
+
+    <div class="content-block">
+        <p>This is another text that is always visible.</p>
+        <div class="more-content">
+            <p>This is another extra content that will be shown when you click "Read More".
+                planning approvals for the
+                designed development, costing the approval development and building
+                same to high standard and delivering developments that withstand the
+                test of time.
+            </p>
+        </div>
+        <button class="read-more-btn">Read More</button>
+    </div>
+
+    <div class="content-block">
+        <p>This is another text that is always visible.</p>
+        <div class="more-content">
+            <p>This is another extra content that will be shown when you click "Read More". planning approvals for the
+                designed development, costing the approval development and building
+                same to high standard and delivering developments that withstand the
+                test of time.</p>
+        </div>
+        <button class="read-more-btn">Read More</button>
+    </div>
+
+    <div class="content-block">
+        <p>This is another text that is always visible.</p>
+        <div class="more-content">
+            <p>This is another extra content that will be shown when you click "Read More". planning approvals for the
+                designed development, costing the approval development and building
+                same to high standard and delivering developments that withstand the
+                test of time.</p>
+        </div>
+        <button class="read-more-btn">Read More</button>
+    </div>
+
+    <div class="content-block">
+        <p>This is another text that is always visible.</p>
+        <div class="more-content">
+            <p>This is another extra content that will be shown when you click "Read More". planning approvals for the
+                designed development, costing the approval development and building
+                same to high standard and delivering developments that withstand the
+                test of time.</p>
+        </div>
+        <button class="read-more-btn">Read More</button>
+    </div>
+
+    <div class="content-block">
+        <p>This is another text that is always visible.</p>
+        <div class="more-content">
+            <p>This is another extra content that will be shown when you click "Read More". planning approvals for the
+                designed development, costing the approval development and building
+                same to high standard and delivering developments that withstand the
+                test of time.</p>
+        </div>
+        <button class="read-more-btn">Read More</button>
     </div>
     
-    <!-- Repeat the above block 6 more times for a total of 8 sections -->
+    <!-- Repeat this structure for each content block -->
     
     
 <script>
-    function toggleContent(button) {
+   document.querySelectorAll('.read-more-btn').forEach(button => {
+    button.addEventListener('click', () => {
         const content = button.previousElementSibling;
         
-        content.classList.toggle('visible');
-    
-        if (content.classList.contains('visible')) {
-            content.style.display = 'block';
-            button.textContent = 'Read Less';
-        } else {
+        if (content.style.display === 'block') {
             content.style.display = 'none';
             button.textContent = 'Read More';
+        } else {
+            content.style.display = 'block';
+            button.textContent = 'Read Less';
         }
-    }
+    });
+});
+
 </script>
 </body>
 </html>

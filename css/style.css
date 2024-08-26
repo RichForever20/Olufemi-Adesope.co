@@ -10384,6 +10384,9 @@ nav[aria-label="breadcrumb"] li:before {
 
       
         /* additional styling */
+        .more-content {
+          display: none;
+      }
            .read-more-btn{
             background-color: transparent;
             border: none;

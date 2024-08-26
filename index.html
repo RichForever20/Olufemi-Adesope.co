@@ -10,7 +10,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Untree.co" />
-    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="shortcut icon" href="company-logo.png" />
 
     <meta name="description" content="" />
     <meta name="keywords" content="bootstrap, bootstrap5" />
@@ -833,7 +833,35 @@ Resumes Of Our Estate Surveyor and Valuer          </h2>
               <div class="person-contents">
                 <h2 class="mb-0"><a href="#"> Olufemi Adesope</a></h2>
                 <span class="meta d-block mb-3"> Lead Consultant </span>
+                <div class="content-block">
+                  <p>
+                   
+                    He was educated at the University of Lagos and University of Ibadan where he obtained BSc (Estate
+                   Management) and MBA respectively.
+                    He is a registered Estate Surveyor and Valuer and worked for Cooperative Bank and Skye Bank Plc where he
+                   was in charge of property management and maintenance of all the banks’ landed properties across the
+                   nation.
+               </p>                  
+               <div class="more-content">
                 <p>
+                  He was also the unit head of the Property and Project management unit of the General Services department
+                  at Skye Bank Plc. Prior to working in the financial institutions; he worked with the professional firms of Funsho
+                  Oladimeji & Co and Epega & Co both in Lagos where he partook in valuation assignments for several private
+                  and public institution clients.
+                  Subsequently he worked with Wemabod Estates Limited and the Odua Investment Company Limited where
+                  he has responsibility for the management of cumulative property portfolios in excess of N70billion including
+                  iconic land mark buildings such as the Western House on Broad Street Lagos and Cocoa House in Ibadan.
+                  He is a Certified Facility Manager and a Class 23 Member of the Advance Management Programme of the
+                  Lagos Business School -2011
+              </p>                  </div>
+                  <button class="read-more-btn learn-more">Read More</button>
+              </div>
+              
+
+
+
+
+                <!-- <p>
                    
                      He was educated at the University of Lagos and University of Ibadan where he obtained BSc (Estate
                     Management) and MBA respectively.
@@ -855,7 +883,7 @@ Resumes Of Our Estate Surveyor and Valuer          </h2>
                     </p>
                     <button class="read-more-btn01 learn-more" onclick="toggleContent(this)">Read More</button>
 
-                </div>
+                </div> -->
 
                 <!-- <ul class="social list-unstyled list-inline dark-hover">
                   <li class="list-inline-item">
@@ -885,7 +913,29 @@ Resumes Of Our Estate Surveyor and Valuer          </h2>
               <div class="person-contents">
                 <h2 class="mb-0"><a href="#"> Adeyemi Ayetiran</a></h2>
                 <span class="meta d-block mb-3">Partner</span>
-                <p>
+                <div class="content-block">
+                  <p>
+                    He was educated at the University of Lagos where he obtained BSc (Estate Management)
+                    in 1992.
+                     He is a registered Estate Surveyor and Valuer and worked for The Federal Ministry of Works
+                    and Housing retiring as a Principal Lands Officer.
+                </p>                  
+                <div class="more-content">
+                  <p>
+                    He is a trained facility management expert and also specializes in rural estate
+                    management and the valuation of antiquities.
+                     He has international exposure in managing housing projects in UK and has continually
+                    deployed the experience in attending to varying real estate development needs of
+                    individual and corporate clients in Nigeria and the Diaspora.
+                </p>                 
+               </div>
+                  <button class="read-more-btn learn-more">Read More</button>
+              </div>
+              
+
+
+
+                <!-- <p>
                     He was educated at the University of Lagos where he obtained BSc (Estate Management)
                     in 1992.
                      He is a registered Estate Surveyor and Valuer and worked for The Federal Ministry of Works
@@ -902,7 +952,7 @@ Resumes Of Our Estate Surveyor and Valuer          </h2>
                     </p>
                     <button class="read-more-btn01 learn-more" onclick="toggleContent(this)">Read More</button>
 
-                </div>
+                </div> -->
 
                 <!-- <ul class="social list-unstyled list-inline dark-hover">
                   <li class="list-inline-item">
@@ -932,7 +982,27 @@ Resumes Of Our Estate Surveyor and Valuer          </h2>
               <div class="person-contents">
                 <h2 class="mb-0"><a href="#"> Olumide Oteniya</a></h2>
                 <span class="meta d-block mb-3">Partner</span>
-                <p>
+                <div class="content-block">
+                  <p>
+                    Mr Olumide Oteniya studied Estate management at the University of Lagos graduating in
+                    1992.
+                    His professional career spans a 15 year stint with Jide Taiwo & Co rising to become the
+                    branch manager for Western Nigeria operations and an associate partner of the firm.
+                </p>                  
+                 <div class="more-content">
+                  <p>
+                    He has participated in the valuation of several assets across the nation for all types of clients
+                    including private individuals, Corporate Organizations and public institutions.
+                    He has attended many training and conferences in and outside the country.
+                </p>                 
+               </div>
+                  <button class="read-more-btn learn-more">Read More</button>
+              </div>
+              
+
+
+
+                <!-- <p>
                     Mr Olumide Oteniya studied Estate management at the University of Lagos graduating in
                     1992.
                     His professional career spans a 15 year stint with Jide Taiwo & Co rising to become the
@@ -947,7 +1017,7 @@ Resumes Of Our Estate Surveyor and Valuer          </h2>
                     </p>
                     <button class="read-more-btn01 learn-more" onclick="toggleContent(this)">Read More</button>
 
-                </div>
+                </div> -->
 
 
 
@@ -1094,19 +1164,19 @@ Resumes Of Our Estate Surveyor and Valuer          </h2>
     <script src="js/counter.js"></script>
     <script src="js/custom.js"></script>
     <script>
-        function toggleContent(button) {
-            const content = button.previousElementSibling;
-            
-            content.classList.toggle('visible');
-        
-            if (content.classList.contains('visible')) {
-                content.style.display = 'block';
-                button.textContent = 'Read Less';
-            } else {
-                content.style.display = 'none';
-                button.textContent = 'Read More';
-            }
-        }
-    </script> 
+      document.querySelectorAll('.read-more-btn').forEach(button => {
+      button.addEventListener('click', () => {
+          const content = button.previousElementSibling;
+          
+          if (content.style.display === 'block') {
+              content.style.display = 'none';
+              button.textContent = 'Read More';
+          } else {
+              content.style.display = 'block';
+              button.textContent = 'Read Less';
+          }
+      });
+  });
+  </script>
   </body>
 </html>
